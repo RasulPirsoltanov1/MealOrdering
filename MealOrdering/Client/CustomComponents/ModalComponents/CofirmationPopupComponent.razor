@@ -1,0 +1,27 @@
+﻿@inherits BaseModalComponent
+
+<div class="card-body">
+    <p>@Message</p>
+</div>
+
+<div class="row justify-content-center">
+    <div class="d-flex ">
+        <div class="m-auto p-2">
+            <button class="btn btn-light" onclick="@ConfirmClick">@OkText</button>
+            <button class="btn btn-light" onclick="@CancelClick">@CancelText</button>
+        </div>
+    </div>
+</div>
+
+@code {
+    [CascadingParameter] public IModalService Modal { get; set; }
+
+    public async override Task SetParametersAsync(ParameterView parameters)
+    {
+        if (Message == null)
+        {
+            Message = "test";
+        }
+        await base.SetParametersAsync(parameters);
+    }
+}

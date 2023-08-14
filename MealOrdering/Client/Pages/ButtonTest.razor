@@ -1,0 +1,69 @@
+﻿@page "/buttontest"
+@using MealOrdering.Client.CustomComponents.ModalComponents;
+@using MealOrdering.Client.Utils;
+
+
+
+@if (contents == String.Empty)
+{
+    <h3>Loading...</h3>
+}
+else
+{
+    <h3>@contents</h3>
+}
+<h1>@title</h1>
+<div class="form-group">
+
+    <div class="container">
+        <div class="btn-toolbar">
+            <ButtonComponent Color="primary" Icon="fa fa-book"></ButtonComponent>
+            <ButtonComponent Color="info" IsOutline=true IsSmall=false IsBusy=true IsBusyCaption="loading..." Icon="fa fa-home"></ButtonComponent>
+            <ButtonComponent Color="info" IsOutline=true IsSmall=false IsBusy=false OnClick="changeTitle" IsBusyCaption="loading..." Icon="fa fa-home"></ButtonComponent>
+            <ButtonComponent Color="info" IsOutline=true IsSmall=false IsBusy=false OnClick="Confirmation" IsBusyCaption="loading..." Icon="fa fa-home"></ButtonComponent>
+            <ButtonComponent Color="info" IsOutline=true IsSmall=false IsBusy=false OnClick="ShowConfirmation" IsBusyCaption="loading..." Icon="fa fa-home"></ButtonComponent>
+
+        </div>
+    </div>
+
+</div>
+
+@code {
+    [CascadingParameter] public IModalService Modal { get; set; }
+    [Inject]
+    public ModalManager _modalManager { get; set; }
+    private string title;
+
+    public string contents { get; set; } = String.Empty;
+    protected override async Task OnInitializedAsync()
+    {
+        await Task.Delay(2000);
+        contents = "Button Test.";
+    }
+
+    private void changeTitle()
+    {
+        ModalParameters keyValuePairs = new ModalParameters();
+        keyValuePairs.Add("Message", "bu bir test ucun yazilib.");
+        keyValuePairs.Add("OkText", "bu bir test ucun yazilib.");
+        //Modal.Show<FetchData>("Counter Popup page");
+        Modal.Show<ShoMessagePopupComponent>("Test", keyValuePairs);
+    }
+    private async void Confirmation()
+    {
+        await _modalManager.ShowMessage("ShowMessage ", "Okey",3000);
+    }
+
+    private async void ShowConfirmation()
+    {
+        var res = await _modalManager.ConfirmationAsync("ShowMessage ", "Okey");
+        if(res)
+        {
+            title = "Successful";
+        }
+        else
+        {
+            title = "error";
+        }
+    }
+}
