@@ -14,15 +14,8 @@ namespace MealOrdering.Server.Data.Models
         public string? LastName { get; set; }
         public string? Email { get; set; }
         public bool? IsActive{ get; set; }
-    }
-    public class Orders
-    {
-        public Guid Id { get; set; }
-        public DateTime? CreateDate { get; set; }
-        public Guid? CreateUserId{ get; set; }
-        public Guid? SupplierId{ get; set; }
-        public string? Name { get; set; }
-        public string? Description { get; set; }
-        public DateTime? ExpireDate { get; set; }
+        public virtual ICollection<Orders> Orders { get; set; }
+        public virtual ICollection<OrderItems> OrderItems { get; set; }
+
     }
 }

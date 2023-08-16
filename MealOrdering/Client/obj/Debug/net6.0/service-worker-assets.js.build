@@ -861,19 +861,19 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-ub+bznaa76yxPjLsoRO0ZoChVd8CaTIPz08Y\/dk2j\/o=",
+      "hash": "sha256-xX8eegB450Jt2frkU3AGqQBdXeUbgKJwQ5ECvQ91OQQ=",
       "url": "_framework\/MealOrdering.Shared.dll"
     },
     {
-      "hash": "sha256-Tg2yNyb7h9Z4BN2ZXhPYQD1DFOExY9yDe1kuuk2hVcg=",
+      "hash": "sha256-zW78GLEIC9dM\/w0+qR4YyijKNqag2QfB9Z79+kvLCLc=",
       "url": "_framework\/MealOrdering.Shared.pdb"
     },
     {
-      "hash": "sha256-QQWCEhuBBtxP3L3VzUKahpGNvwsSuJTBqelWdXPQA0I=",
+      "hash": "sha256-yY6ihT00ERRDn+XvnEoXPL5xoGmKvK3341tsXxwb3rk=",
       "url": "_framework\/MealOrdering.Client.dll"
     },
     {
-      "hash": "sha256-qh5p39DOWGjFE4L7rGiJpzNU3CPb6tj4gis37f6NjvE=",
+      "hash": "sha256-pi1MJbxhNW0C+n\/EVRKkq7OelvqPMKy5u78UcyqB+Hk=",
       "url": "_framework\/MealOrdering.Client.pdb"
     },
     {
@@ -881,7 +881,7 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-3gfkXND6A0EzlGXRYvmEJWvN4Rg3DdtshUd76ptq8AU=",
+      "hash": "sha256-Pz3\/Gbay3M77SB0wzVpvNNflnxiTkSoIAHwJnGl15FQ=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -893,5 +893,5 @@
       "url": "_content\/Blazored.Modal\/Blazored.Modal.bundle.scp.css"
     }
   ],
-  "version": "M2QIZ8FB"
+  "version": "mZDAOT35"
 };

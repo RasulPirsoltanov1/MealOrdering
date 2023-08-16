@@ -1,5 +1,8 @@
 using Blazored.Modal;
+using MealOrdering.Server.Data.Context;
+using MealOrdering.Server.Services.Extensions;
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +11,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddBlazoredModal();
+builder.Services.AddDbContext<MealOrderingDbContext>(opt =>
+{
+	opt.UseSqlServer("Server=DESKTOP-UGCLLOE\\MSSQLSERVER2;Database=MailOrderingDb ;Trusted_Connection=True;");
+});
+builder.Services.AddAutoMapper(typeof(ConfigureMappingExtension).Assembly);
 
 var app = builder.Build();
 
