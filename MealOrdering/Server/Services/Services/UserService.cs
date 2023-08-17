@@ -3,71 +3,44 @@ using MealOrdering.Server.Data.Context;
 using MealOrdering.Server.Services.Infrastrucuture;
 using MealOrdering.Shared.DTOs;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace MealOrdering.Server.Services.Services
 {
-    public class UserService : IUserService
+    public class UserService : GenericService<UserDTO>, IUserService
     {
-        private readonly IMapper _mapper;
-        private readonly MealOrderingDbContext _context;
-        public UserService(IMapper mapper, MealOrderingDbContext context)
+        public IMapper Mapper { get; }
+        public MealOrderingDbContext Context { get; }
+        IConfiguration _configuration;
+        public UserService(IMapper mapper, MealOrderingDbContext context, IConfiguration configuration) : base(mapper, context)
         {
-            _mapper = mapper;
-            _context = context;
-        }
-        public async Task<UserDTO> Create(UserDTO userDTO)
-        {
-            await _context.AddAsync(userDTO);
-            await _context.SaveChangesAsync();
-            return userDTO;
+            Mapper = mapper;
+            Context = context;
+            _configuration = configuration;
         }
 
-        public async Task<UserDTO> Delete(Guid Id)
+        public async Task<string> Login(string email, string password)
         {
-            var entity = _context.Users.Find(Id);
-            if (entity != null)
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:SecurityKey"]));
+            var credential = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+            double days = double.Parse(_configuration["JWT:JwtExpireDate"]);
+            var expireTime = DateTime.Now.AddDays(days);
+            var claims = new[]
             {
-                _context.Remove(entity);
-                await _context.SaveChangesAsync();
-                return _mapper.Map<UserDTO>(entity);
-            }
-            else
-            {
-                throw new Exception("User cant define!");
-            }
-        }
-
-        public async Task<List<UserDTO>> GetAll()
-        {
-            return _mapper.Map<List<UserDTO>>(await _context.Users.Where(u => u.IsActive == true).ToListAsync());
-        }
-
-        public async Task<UserDTO> GetById(Guid Id)
-        {
-            var user = await _context.Users.FirstOrDefaultAsync(x => x.Id == Id);
-            if (user != null)
-            {
-                return _mapper.Map<UserDTO>(user);
-            }
-            else
-            {
-                throw new Exception("User cant define!");
-            }
-        }
-
-        public async Task<UserDTO> Update(UserDTO userDTO)
-        {
-            var entity = _context.Users.Find(userDTO.Id);
-            if (entity != null)
-            {
-                _mapper.Map(userDTO, entity);
-                await _context.SaveChangesAsync();
-                return _mapper.Map<UserDTO>(entity);
-            }
-            else
-            {
-                throw new Exception("User cant define!");
-            }
+                new Claim(ClaimTypes.Email,email),
+            };
+            var securityToken = new JwtSecurityToken(issuer: _configuration["JWT:JwtIssuer"],
+                audience: _configuration["JWT:JwtAuidence"],
+                claims: claims,
+                notBefore: null,
+                expires: expireTime,
+                signingCredentials: credential);
+            string token = new JwtSecurityTokenHandler().WriteToken(securityToken);
+            return token;
         }
     }
+
 }

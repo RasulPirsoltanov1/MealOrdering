@@ -1,5 +1,5 @@
 ﻿using MealOrdering.Shared.DTOs;
-using MealOrdering.Shared.NewFolder.ResponseModels;
+using MealOrdering.Shared.ResponseModels;
 using Microsoft.AspNetCore.Components;
 using System.ComponentModel;
 using System.Net.Http.Json;

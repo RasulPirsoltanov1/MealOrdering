@@ -3,8 +3,11 @@ using MealOrdering.Server.Data.Context;
 using MealOrdering.Server.Services.Extensions;
 using MealOrdering.Server.Services.Infrastrucuture;
 using MealOrdering.Server.Services.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,7 +22,23 @@ builder.Services.AddDbContext<MealOrderingDbContext>(opt =>
 });
 builder.Services.AddAutoMapper(typeof(ConfigureMappingExtension).Assembly);
 builder.Services.AddScoped<IUserService, UserService>();
-
+builder.Services.AddAuthentication(opt =>
+{
+    opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(opt =>
+{
+    opt.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = "https://my_company.com",
+        ValidAudience = "https://my_company.com",
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:SecurityKey"]))
+    };
+});
 
 var app = builder.Build();
 

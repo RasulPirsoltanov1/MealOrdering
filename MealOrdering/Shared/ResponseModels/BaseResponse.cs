@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MealOrdering.Shared.NewFolder.ResponseModels
+namespace MealOrdering.Shared.ResponseModels
 {
     public class BaseResponse
     {
