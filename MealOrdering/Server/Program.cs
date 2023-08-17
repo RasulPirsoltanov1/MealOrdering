@@ -1,6 +1,8 @@
 using Blazored.Modal;
 using MealOrdering.Server.Data.Context;
 using MealOrdering.Server.Services.Extensions;
+using MealOrdering.Server.Services.Infrastrucuture;
+using MealOrdering.Server.Services.Services;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,22 +15,24 @@ builder.Services.AddRazorPages();
 builder.Services.AddBlazoredModal();
 builder.Services.AddDbContext<MealOrderingDbContext>(opt =>
 {
-	opt.UseSqlServer("Server=DESKTOP-UGCLLOE\\MSSQLSERVER2;Database=MailOrderingDb ;Trusted_Connection=True;");
+    opt.UseSqlServer("Server=DESKTOP-UGCLLOE\\MSSQLSERVER2;Database=MailOrderingDb ;Trusted_Connection=True;");
 });
 builder.Services.AddAutoMapper(typeof(ConfigureMappingExtension).Assembly);
+builder.Services.AddScoped<IUserService, UserService>();
+
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-	app.UseWebAssemblyDebugging();
+    app.UseWebAssemblyDebugging();
 }
 else
 {
-	app.UseExceptionHandler("/Error");
-	// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-	app.UseHsts();
+    app.UseExceptionHandler("/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
 }
 
 app.UseHttpsRedirection();

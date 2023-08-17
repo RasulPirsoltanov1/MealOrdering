@@ -1,0 +1,40 @@
+﻿@page "/userList";
+@inherits UserListProcess;
+@using MealOrdering.Client.PageProcess.User;
+
+
+
+<h3>UserList</h3>
+<button class="btn btn-primary" @onclick="LoadList"> click for refresh list</button>
+@if (serviceResponse == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name and Surname</th>
+                <th>CreateDate</th>
+                <th>IsActive</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var forecast in serviceResponse.Value)
+            {
+                <tr>
+                    <td>@forecast.Id</td>
+                    <td>@forecast.FullName</td>
+                    <td>@forecast.CreateDate</td>
+                    <td>@forecast.IsActive</td>
+                    <td>@forecast.Email</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+

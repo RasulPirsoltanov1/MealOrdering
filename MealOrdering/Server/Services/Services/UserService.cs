@@ -33,7 +33,7 @@ namespace MealOrdering.Server.Services.Services
             }
             else
             {
-                return null;
+                throw new Exception("User cant define!");
             }
         }
 
@@ -44,7 +44,15 @@ namespace MealOrdering.Server.Services.Services
 
         public async Task<UserDTO> GetById(Guid Id)
         {
-            return _mapper.Map<UserDTO>(await _context.Users.Where(u => u.IsActive == true).FirstOrDefaultAsync(x => x.Id == Id));
+            var user = await _context.Users.FirstOrDefaultAsync(x => x.Id == Id);
+            if (user != null)
+            {
+                return _mapper.Map<UserDTO>(user);
+            }
+            else
+            {
+                throw new Exception("User cant define!");
+            }
         }
 
         public async Task<UserDTO> Update(UserDTO userDTO)
@@ -52,13 +60,13 @@ namespace MealOrdering.Server.Services.Services
             var entity = _context.Users.Find(userDTO.Id);
             if (entity != null)
             {
-                _context.Update(userDTO);
+                _mapper.Map(userDTO, entity);
                 await _context.SaveChangesAsync();
                 return _mapper.Map<UserDTO>(entity);
             }
             else
             {
-                return null;
+                throw new Exception("User cant define!");
             }
         }
     }

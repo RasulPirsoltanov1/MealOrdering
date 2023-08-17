@@ -89,3 +89,5 @@ C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Server\bin
 C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Server\bin\Debug\net6.0\MealOrdering.Server.Data.pdb
 C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Server\bin\Debug\net6.0\Humanizer.dll
 C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Server\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Server\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

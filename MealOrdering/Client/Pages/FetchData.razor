@@ -1,5 +1,7 @@
 ﻿@page "/fetchdata"
 @using MealOrdering.Shared
+@using MealOrdering.Shared.DTOs;
+@using MealOrdering.Shared.NewFolder.ResponseModels;
 @inject HttpClient Http
 
 <PageTitle>Weather forecast</PageTitle>
@@ -37,11 +39,18 @@ else
     </table>
 }
 
+
+
+
+
+
 @code {
     private WeatherForecast[]? forecasts;
+    private ServiceResponse<List<UserDTO>>? serviceResponse;
 
     protected override async Task OnInitializedAsync()
     {
         forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast");
+        serviceResponse = await Http.GetFromJsonAsync<ServiceResponse<List<UserDTO>>>("api/User");
     }
 }
