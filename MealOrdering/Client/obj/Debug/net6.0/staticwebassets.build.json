@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qwadlaW19huaxbQrVzNH6V5ovqOup4/wC/CJU6NdLdE=",
+  "Hash": "eSQGPzu1b5lPdGmIqxpnH5Scu6PCuKVQ8r9Nq7zKVss=",
   "Source": "MealOrdering.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\resul\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\6.0.19\\build\\net6.0\\blazor.webassembly.js"
+    },
+    {
+      "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll",
+      "SourceId": "MealOrdering.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\resul\\.nuget\\packages\\blazored.localstorage\\4.4.0\\lib\\net6.0\\Blazored.LocalStorage.dll"
     },
     {
       "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.Modal.dll",
@@ -6611,6 +6628,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Runtime.Serialization.dll"
+    },
+    {
+      "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\obj\\Debug\\net6.0\\build-gz\\WJR+gPj+.gz",
+      "SourceId": "MealOrdering.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll"
     },
     {
       "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\obj\\Debug\\net6.0\\build-gz\\wlCKDktL.gz",

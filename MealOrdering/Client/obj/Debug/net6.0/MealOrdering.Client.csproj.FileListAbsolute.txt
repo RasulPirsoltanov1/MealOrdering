@@ -834,3 +834,7 @@ C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\bin
 C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\bin\Debug\net6.0\wwwroot\_framework\Blazored.Modal.dll.gz
 C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\bin\Debug\net6.0\Blazored.Modal.dll
 C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\obj\Debug\net6.0\build-gz\2oeQZO1w.gz
+C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll.gz
+C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\bin\Debug\net6.0\Blazored.LocalStorage.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\obj\Debug\net6.0\build-gz\WJR+gPj+.gz

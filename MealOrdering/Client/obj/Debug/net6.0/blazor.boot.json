@@ -7,6 +7,7 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
+      "Blazored.LocalStorage.dll": "sha256-w2vMoqbIgF9UyzKqfDFXjqgg7IsGRHDvzb6DcyaPW6s=",
       "Blazored.Modal.dll": "sha256-Sr30UiM7JErBe8hojY6HAgaOOgfQE5zHijI0uVypmkM=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-cS22FAHmrDwLTAjlZCtQiBPLSkoaKRXJSQm7xk4FaBE=",
       "Microsoft.AspNetCore.Components.dll": "sha256-aFUXuxBgKshEkyvzJA8iKU0P+\/\/mEM1KFG+YJVs97f8=",
@@ -198,14 +199,14 @@
       "netstandard.dll": "sha256-2M8m82GceNG8Z8I4dD74L7Tl4vwXdwXcVpYN80ouzQA=",
       "System.Private.CoreLib.dll": "sha256-dFxocfrY9q0E7UJ6nBlyNfnWYTyPu3RKzSggfRhoPJY=",
       "MealOrdering.Shared.dll": "sha256-\/vvEyMkSvv90aDHP4HJ8dPTtnKq+E0JqlNQwbsqGHE4=",
-      "MealOrdering.Client.dll": "sha256-\/WRV+ZJNrUhdKRpaP68o1S9izRG2pgen8jfH40+AH7M="
+      "MealOrdering.Client.dll": "sha256-+UtKdsav5YBBtM\/RqAYCmn8mMd7JrWtFhMpHEygqMIA="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "MealOrdering.Shared.pdb": "sha256-VPFzs4WEvPbYAYmhHCEROY\/S\/DoVaIPhylZI+25Ouso=",
-      "MealOrdering.Client.pdb": "sha256-Xs4uLGnJz+Wfg1Ppg7tWDPBbO0ze2Dnwka3r0dvsJYs="
+      "MealOrdering.Client.pdb": "sha256-2FYk5prGlGQJ3DwuzVkgIu1uZWo\/1lAta0i06lQ34yA="
     },
     "runtime": {
       "dotnet.6.0.20.6w5axpn2w7.js": "sha256-iXtnf0CK+zdIWjR0cpE38tWChIpNC6sO+aSQAW+aBQU=",
