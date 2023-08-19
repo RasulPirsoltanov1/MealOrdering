@@ -610,12 +610,9 @@ C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\obj
 C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\obj\Debug\net6.0\MealOrdering.Client.AssemblyInfo.cs
 C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\obj\Debug\net6.0\MealOrdering.Client.csproj.CoreCompileInputs.cache
 C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\obj\Debug\net6.0\MealOrdering.Client.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\obj\Debug\net6.0\build-gz\9wYCvgs2.gz
-C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\obj\Debug\net6.0\build-gz\T6JiKau0.gz
 C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\obj\Debug\net6.0\build-gz\VYptojRA.gz
 C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\obj\Debug\net6.0\build-gz\JqTyIpJC.gz
 C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\obj\Debug\net6.0\build-gz\0bvDuZV2.gz
-C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\obj\Debug\net6.0\build-gz\3V0Dnq6b.gz
 C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\obj\Debug\net6.0\build-gz\rOnMkJgY.gz
 C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\obj\Debug\net6.0\build-gz\3mvz1Dt+.gz
 C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\obj\Debug\net6.0\build-gz\fP0ZusZq.gz
@@ -838,3 +835,10 @@ C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\bin
 C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll.gz
 C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\bin\Debug\net6.0\Blazored.LocalStorage.dll
 C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\obj\Debug\net6.0\build-gz\WJR+gPj+.gz
+C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll.gz
+C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\obj\Debug\net6.0\build-gz\5StenHc7.gz
+C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\obj\Debug\net6.0\build-gz\E1mNiNgG.gz
+C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\obj\Debug\net6.0\build-gz\TWkG2Czq.gz
+C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\obj\Debug\net6.0\build-gz\3TDJjpiy.gz

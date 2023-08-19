@@ -81,12 +81,16 @@
       "url": "_framework\/Blazored.Modal.dll"
     },
     {
-      "hash": "sha256-cS22FAHmrDwLTAjlZCtQiBPLSkoaKRXJSQm7xk4FaBE=",
+      "hash": "sha256-rgTiigjbEsvEBcZsymPcgGCo6oUscPZ5qpj2DDeiatU=",
       "url": "_framework\/Microsoft.AspNetCore.Authorization.dll"
     },
     {
-      "hash": "sha256-aFUXuxBgKshEkyvzJA8iKU0P+\/\/mEM1KFG+YJVs97f8=",
+      "hash": "sha256-bYwZvw5x89oX0\/5svHqi\/Pqi0yLQg11PtsnbxPKoSX4=",
       "url": "_framework\/Microsoft.AspNetCore.Components.dll"
+    },
+    {
+      "hash": "sha256-8qBCyn9T7gF\/C9kUOMPZryW1s4VPknJC28eL7ThsDLw=",
+      "url": "_framework\/Microsoft.AspNetCore.Components.Authorization.dll"
     },
     {
       "hash": "sha256-eP3tLMkdWuhMJ9GaHIuXGNbINEWgwiRqWQGUzdecjPM=",
@@ -101,7 +105,7 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.WebAssembly.dll"
     },
     {
-      "hash": "sha256-fF6zyBpe471NsMCgBOpxScY7qhPe6MZHCWKQebOLSOA=",
+      "hash": "sha256-xpd\/jVYTPRxI1FrhZiTRTSfQ\/o33stjulDy9P4H18r4=",
       "url": "_framework\/Microsoft.AspNetCore.Metadata.dll"
     },
     {
@@ -865,19 +869,19 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-\/vvEyMkSvv90aDHP4HJ8dPTtnKq+E0JqlNQwbsqGHE4=",
+      "hash": "sha256-UWlSnc7+DpKfEXdWT3lb6XyzOeXegZCA0eiT26fBNX0=",
       "url": "_framework\/MealOrdering.Shared.dll"
     },
     {
-      "hash": "sha256-VPFzs4WEvPbYAYmhHCEROY\/S\/DoVaIPhylZI+25Ouso=",
+      "hash": "sha256-09vnQmGmpY0vzkEBa59syVZ3d27VO1BWj9lkLipHVxM=",
       "url": "_framework\/MealOrdering.Shared.pdb"
     },
     {
-      "hash": "sha256-ZfFXtIehl2arVSLMXP+E3jS9utVpHRbgP+iJEvbBN2g=",
+      "hash": "sha256-DjLB5GfKcq7LSfDyvdyt6+5K16h3DlNuXexdvVr+lUQ=",
       "url": "_framework\/MealOrdering.Client.dll"
     },
     {
-      "hash": "sha256-iqmopJN15NBlglEGssrrGfTeiUt2ALx\/ZBQjouNlcsk=",
+      "hash": "sha256-mIwe1VnxrzMinpeg+682Q7lesB9oWonqEOHz+mFkDnM=",
       "url": "_framework\/MealOrdering.Client.pdb"
     },
     {
@@ -885,7 +889,7 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-ltFX2aLINtZET7cDwC9U6iPN5bMRXFoDoPYjtDghxF4=",
+      "hash": "sha256-NxnlUM99vh5yCLaAhzpYPvzpHbKV\/\/7GU+8HDE6UgOM=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -897,5 +901,5 @@
       "url": "_content\/Blazored.Modal\/Blazored.Modal.bundle.scp.css"
     }
   ],
-  "version": "RVfqPF16"
+  "version": "N5V7HDIm"
 };

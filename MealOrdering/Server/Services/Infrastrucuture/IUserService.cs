@@ -5,6 +5,6 @@ namespace MealOrdering.Server.Services.Infrastrucuture
 {
     public interface IUserService:IGenericService<UserDTO>
     {
-        Task<string> Login(string email,string password);
+        Task<UserLoginResponseDTO> Login(string email,string password);
     }
 }

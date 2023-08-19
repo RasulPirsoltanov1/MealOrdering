@@ -1,0 +1,82 @@
+﻿@layout EmptyLayout
+
+@page "/login"
+@using Blazored.LocalStorage;
+@using MealOrdering.Client.Utils;
+@using MealOrdering.Shared.DTOs;
+@using MealOrdering.Shared.ResponseModels;
+@using Microsoft.AspNetCore.Components.Authorization;
+
+<div class="row align-items-center justify-content-center vh-20">
+
+    <div class="col-4 ">
+        <h3>Meal Odering | Login Page</h3>
+        <EditForm Model="@userLoginRequestDTO" OnSubmit="UserLogin">
+            <DataAnnotationsValidator />
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+                <input type="email" @bind-value="@userLoginRequestDTO.Email" id="form2Example1" class="form-control" />
+                <label class="form-label" for="form2Example1">Email address</label>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+                <input type="password" @bind-value="@userLoginRequestDTO.Password" id="form2Example2" class="form-control" />
+                <label class="form-label" for="form2Example2">Password</label>
+            </div>
+
+
+            <!-- Submit button -->
+            <button class="btn btn-primary btn-block mb-4">Sign in</button>
+
+        </EditForm>
+    </div>
+</div>
+@reqRes
+@code {
+
+    [Inject]
+    private HttpClient _httpClient { get; set; }
+    [CascadingParameter]
+    private IModalService _modalService { get; set; }
+    [Inject]
+    private ModalManager _modalManager { get; set; }
+    [Inject]
+    private NavigationManager _navigationManager { get; set; }
+    private UserLoginRequestDTO userLoginRequestDTO = new UserLoginRequestDTO();
+    private HttpResponseMessage reqRes = new HttpResponseMessage();
+    [Inject]
+    AuthenticationStateProvider _authStateProvider { get; set; }
+    private ILocalStorageService localStorageService { get; set; }
+
+
+
+    private async Task UserLogin()
+    {
+
+        reqRes = await _httpClient.PostAsJsonAsync("api/User/login", userLoginRequestDTO);
+        @if (reqRes.IsSuccessStatusCode)
+        {
+            ServiceResponse<UserLoginResponseDTO> userLoginResponseDTO = await reqRes.Content.ReadFromJsonAsync<ServiceResponse<UserLoginResponseDTO>>();
+
+            if (userLoginResponseDTO.IsSuccess)
+            {
+                await localStorageService.SetItemAsync("token", userLoginResponseDTO.Value.ApiToken);
+                await localStorageService.SetItemAsync("email", userLoginResponseDTO.Value.User.Email);
+                (_authStateProvider as AuthStateProvider)?.NotifyUserLogin(userLoginResponseDTO?.Value?.User?.Email ?? null);
+                _navigationManager.NavigateTo("/");
+            }
+            else
+            {
+                await _modalManager.ShowMessage("Login error", userLoginResponseDTO.Message, 10000);
+            }
+        }
+        else
+        {
+            await _modalManager.ShowMessage("wrong email or password", "wrong email or password");
+
+        }
+
+    }
+
+}

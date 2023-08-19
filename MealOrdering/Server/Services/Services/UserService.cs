@@ -25,10 +25,12 @@ namespace MealOrdering.Server.Services.Services
             _configuration = configuration;
         }
 
-        public async Task<string> Login(string email, string password)
+        public async Task<UserLoginResponseDTO> Login(string email, string password)
         {
+            string key1 = "0123456789abcdef"; // 128 bit (16 byte) key in hexadecimal format
+            string iv1 = "fedcba9876543210";
 
-            var hashPass = PasswordManager.Encrypt(password, "key", "iv");
+            var hashPass = PasswordManager.Encrypt(password, key1, iv1);
             var user = await Context.Users.FirstOrDefaultAsync(u => u.Email == email && u.Password == hashPass);
             if (user == null)
                 throw new Exception("wrong password or email");
@@ -39,6 +41,7 @@ namespace MealOrdering.Server.Services.Services
             var claims = new[]
             {
                 new Claim(ClaimTypes.Email,email),
+                new Claim(ClaimTypes.Name,user.FirstName)
             };
             var securityToken = new JwtSecurityToken(issuer: _configuration["JWT:JwtIssuer"],
                 audience: _configuration["JWT:JwtAuidence"],
@@ -47,7 +50,11 @@ namespace MealOrdering.Server.Services.Services
                 expires: expireTime,
                 signingCredentials: credential);
             string token = new JwtSecurityTokenHandler().WriteToken(securityToken);
-            return token;
+            return new UserLoginResponseDTO
+            {
+                ApiToken = token,
+                User = Mapper.Map<UserDTO>(user),
+            };
         }
     }
 

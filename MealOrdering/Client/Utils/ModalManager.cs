@@ -19,9 +19,9 @@ namespace MealOrdering.Client.Utils
 
             ModalParameters keyValuePairs = new ModalParameters();
             //keyValuePairs.Add("Message", "Are you sure?");
-            keyValuePairs.Add("OkText", message);
-            keyValuePairs.Add("CancelText", "Cancel");
-            var result = _modalService.Show<CofirmationPopupComponent>("warning!", keyValuePairs);
+            keyValuePairs.Add("Message", message);
+            keyValuePairs.Add("OkText", "I Understand");
+            var result = _modalService.Show<ShoMessagePopupComponent>("warning!", keyValuePairs);
             if (duartion > 0)
             {
                 await Task.Delay(duartion);

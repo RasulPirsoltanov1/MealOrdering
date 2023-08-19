@@ -18,13 +18,14 @@ namespace MealOrdering.Server.Controllers
         }
 
 
-        [HttpGet("[action]")]
-        public async Task<ServiceResponse<string>> Login(string email, string password)
+        [HttpPost("[action]")]
+        public async Task<ServiceResponse<UserLoginResponseDTO>> Login([FromBody]UserLoginRequestDTO userLoginRequestDTO)
         {
-            return new ServiceResponse<string>
+            return new ServiceResponse<UserLoginResponseDTO>()
             {
-                Value = await _userService.Login(email, password)
+                Value = await _userService.Login(userLoginRequestDTO.Email, userLoginRequestDTO.Password)
             };
+
         }
 
 

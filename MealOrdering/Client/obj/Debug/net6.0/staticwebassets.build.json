@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "eSQGPzu1b5lPdGmIqxpnH5Scu6PCuKVQ8r9Nq7zKVss=",
+  "Hash": "wi5ZY9AVSSnYIficGpjK0YKV67jY01Z6qgKmDBp7INE=",
   "Source": "MealOrdering.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -320,7 +320,24 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\resul\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.19\\lib\\net6.0\\Microsoft.AspNetCore.Authorization.dll"
+      "OriginalItemSpec": "C:\\Users\\resul\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.21\\lib\\net6.0\\Microsoft.AspNetCore.Authorization.dll"
+    },
+    {
+      "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.dll",
+      "SourceId": "MealOrdering.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Authorization.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\resul\\.nuget\\packages\\microsoft.aspnetcore.components.authorization\\6.0.21\\lib\\net6.0\\Microsoft.AspNetCore.Components.Authorization.dll"
     },
     {
       "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll",
@@ -337,7 +354,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\resul\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.19\\lib\\net6.0\\Microsoft.AspNetCore.Components.dll"
+      "OriginalItemSpec": "C:\\Users\\resul\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.21\\lib\\net6.0\\Microsoft.AspNetCore.Components.dll"
     },
     {
       "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll",
@@ -405,7 +422,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\resul\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.19\\lib\\net6.0\\Microsoft.AspNetCore.Metadata.dll"
+      "OriginalItemSpec": "C:\\Users\\resul\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.21\\lib\\net6.0\\Microsoft.AspNetCore.Metadata.dll"
     },
     {
       "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.CSharp.dll",
@@ -3859,7 +3876,7 @@
       "OriginalItemSpec": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Json.dll"
     },
     {
-      "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\obj\\Debug\\net6.0\\build-gz\\3V0Dnq6b.gz",
+      "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\obj\\Debug\\net6.0\\build-gz\\3TDJjpiy.gz",
       "SourceId": "MealOrdering.Client",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
@@ -3959,6 +3976,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.dll"
+    },
+    {
+      "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\obj\\Debug\\net6.0\\build-gz\\5StenHc7.gz",
+      "SourceId": "MealOrdering.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Authorization.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll"
     },
     {
       "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\obj\\Debug\\net6.0\\build-gz\\5Ud93Zlb.gz",
@@ -4146,23 +4180,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Net.NameResolution.dll"
-    },
-    {
-      "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\obj\\Debug\\net6.0\\build-gz\\9wYCvgs2.gz",
-      "SourceId": "MealOrdering.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Authorization.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll"
     },
     {
       "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\obj\\Debug\\net6.0\\build-gz\\A1gtffEs.gz",
@@ -4452,6 +4469,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Text.Encoding.dll"
+    },
+    {
+      "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\obj\\Debug\\net6.0\\build-gz\\E1mNiNgG.gz",
+      "SourceId": "MealOrdering.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll"
     },
     {
       "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\obj\\Debug\\net6.0\\build-gz\\ebYTCIX4.gz",
@@ -6171,23 +6205,6 @@
       "OriginalItemSpec": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Diagnostics.StackTrace.dll"
     },
     {
-      "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\obj\\Debug\\net6.0\\build-gz\\T6JiKau0.gz",
-      "SourceId": "MealOrdering.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Components.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll"
-    },
-    {
       "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\obj\\Debug\\net6.0\\build-gz\\tAywFIuZ.gz",
       "SourceId": "MealOrdering.Client",
       "SourceType": "Computed",
@@ -6254,6 +6271,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Security.Cryptography.Csp.dll"
+    },
+    {
+      "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\obj\\Debug\\net6.0\\build-gz\\TWkG2Czq.gz",
+      "SourceId": "MealOrdering.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Authorization.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.dll"
     },
     {
       "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\MealOrdering\\MealOrdering\\Client\\obj\\Debug\\net6.0\\build-gz\\U+qiMX4+.gz",
