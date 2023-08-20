@@ -1,0 +1,22 @@
+﻿@page "/logout"
+@using Blazored.LocalStorage;
+@using MealOrdering.Client.Utils;
+@using Microsoft.AspNetCore.Components.Authorization;
+
+
+
+@code {
+    [Inject]
+    ILocalStorageService _localStorageService { get; set; }
+    [Inject]
+    NavigationManager _navigationManager{ get; set; }
+    [Inject]
+    AuthenticationStateProvider _authenticationStateProvider{ get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        (_authenticationStateProvider as AuthStateProvider).NotifyUserLogout(await _localStorageService.GetItemAsync<string>("email"));
+        await _localStorageService.ClearAsync();
+        _navigationManager.NavigateTo("login");
+
+    }
+}

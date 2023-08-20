@@ -1,4 +1,6 @@
-﻿@inherits LayoutComponentBase
+﻿@using Blazored.LocalStorage;
+@using Microsoft.AspNetCore.Components.Authorization;
+@inherits LayoutComponentBase
 
 
 <div class="page">
@@ -9,7 +11,7 @@
     <main>
         <div class="top-row px-4">
             <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-            <a href="/login" target="_blank">Login</a>
+            <a href="/login" target="_blank">@LoginContent</a>
         </div>
 
         <article class="content px-4">
@@ -17,3 +19,28 @@
         </article>
     </main>
 </div>
+
+
+@code{
+    [CascadingParameter]
+    private Task<AuthenticationState> _authenticationState { get; set; }
+    [Inject]
+    private ILocalStorageService _localStorageService { get; set; }
+    [Inject]
+    private NavigationManager _navigationManager{ get; set; }
+    private string LoginContent="Login";
+
+    protected override async Task OnInitializedAsync()
+    {
+        var state = await _authenticationState;
+        if (state.User.Identity.IsAuthenticated)
+        {
+            LoginContent = await _localStorageService.GetItemAsync<string>("email");
+        }
+        else
+        {
+            _navigationManager.NavigateTo("login");
+        }
+    }
+
+}

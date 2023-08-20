@@ -47,6 +47,7 @@
     private HttpResponseMessage reqRes = new HttpResponseMessage();
     [Inject]
     AuthenticationStateProvider _authStateProvider { get; set; }
+    [Inject]
     private ILocalStorageService localStorageService { get; set; }
 
 
@@ -64,6 +65,7 @@
                 await localStorageService.SetItemAsync("token", userLoginResponseDTO.Value.ApiToken);
                 await localStorageService.SetItemAsync("email", userLoginResponseDTO.Value.User.Email);
                 (_authStateProvider as AuthStateProvider)?.NotifyUserLogin(userLoginResponseDTO?.Value?.User?.Email ?? null);
+                _httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", userLoginResponseDTO.Value.ApiToken);
                 _navigationManager.NavigateTo("/");
             }
             else

@@ -1,6 +1,7 @@
 ﻿using MealOrdering.Server.Services.Infrastrucuture;
 using MealOrdering.Shared.DTOs;
 using MealOrdering.Shared.ResponseModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,7 @@ namespace MealOrdering.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class UserController : ControllerBase
     {
         IUserService _userService;
@@ -19,6 +21,7 @@ namespace MealOrdering.Server.Controllers
 
 
         [HttpPost("[action]")]
+        [AllowAnonymous]
         public async Task<ServiceResponse<UserLoginResponseDTO>> Login([FromBody]UserLoginRequestDTO userLoginRequestDTO)
         {
             return new ServiceResponse<UserLoginResponseDTO>()
