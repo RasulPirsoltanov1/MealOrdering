@@ -1,0 +1,11 @@
+﻿@inherits BaseButtonComponent
+
+
+<button class="btn btn-success"
+        type="submit"
+        disabled="@IsBusy"
+        onclick="@OnClick"
+        title="@(Tooltip ?? "Add")">
+    <i class="@(Icon?? "fa-regular fa-plus")"></i>
+    @(Caption ?? "Add")
+</button>

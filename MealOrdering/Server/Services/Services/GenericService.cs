@@ -1,12 +1,13 @@
 ﻿using AutoMapper;
 using MealOrdering.Server.Data.Context;
+using MealOrdering.Server.Data.Models;
 using MealOrdering.Server.Services.Infrastrucuture;
 using MealOrdering.Shared.DTOs;
 using Microsoft.EntityFrameworkCore;
 
 namespace MealOrdering.Server.Services.Services
 {
-    public class GenericService<T>:IGenericService<T> where T : BaseDTO
+    public class GenericService<T>:IGenericService<T> where T : BaseEntity
     {
 
         private readonly IMapper _mapper;
@@ -18,7 +19,7 @@ namespace MealOrdering.Server.Services.Services
         }
         public async Task<T> Create(T userDTO)
         {
-            await _context.AddAsync(userDTO);
+            await _context.Set<T>().AddAsync(userDTO);
             await _context.SaveChangesAsync();
             return userDTO;
         }

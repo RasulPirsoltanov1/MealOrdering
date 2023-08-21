@@ -1,0 +1,11 @@
+﻿@inherits BaseButtonComponent
+
+
+<button class="btn btn-outline-warning"
+        type="submit"
+        disabled="@IsBusy"
+        onclick="@OnClick"
+        title="@(Tooltip ?? "Edit")">
+    <i class="@(Icon?? "fa-solid fa-pen-to-square fa-spin")"></i>
+    @(Caption ?? "Edit")
+</button>

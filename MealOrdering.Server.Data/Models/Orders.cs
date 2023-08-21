@@ -1,8 +1,8 @@
 ﻿namespace MealOrdering.Server.Data.Models
 {
-    public class Orders
+    public class Orders : BaseEntity
     {
-        public Guid Id { get; set; }
+
         public DateTime? CreateDate { get; set; }
         public Guid? CreateUserId { get; set; }
         public Guid? SupplierId { get; set; }

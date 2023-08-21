@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using MealOrdering.Client.Utils;
 using MealOrdering.Server.Data.Context;
+using MealOrdering.Server.Data.Models;
 using MealOrdering.Server.Services.Infrastrucuture;
 using MealOrdering.Shared.DTOs;
 using Microsoft.AspNetCore.Identity;
@@ -13,7 +14,7 @@ using System.Text;
 
 namespace MealOrdering.Server.Services.Services
 {
-    public class UserService : GenericService<UserDTO>, IUserService
+    public class UserService : GenericService<Users>, IUserService
     {
         public IMapper Mapper { get; }
         public MealOrderingDbContext Context { get; }

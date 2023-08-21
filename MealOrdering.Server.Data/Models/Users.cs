@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace MealOrdering.Server.Data.Models
 {
-    public class Users
+    public class Users : BaseEntity
     {
-        public Guid Id { get; set; }
+
         public DateTime? CreateDate{ get; set; }
         public string? Password { get; set; }
         public string? FirstName{ get; set; }

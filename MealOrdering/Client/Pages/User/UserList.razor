@@ -3,7 +3,13 @@
 @using MealOrdering.Client.PageProcess.User;
 
 
+<div class="btn-group">
 
+    <div class="container">
+        <AddNewButtonComponent OnClick="AddUser" Caption="Add New User"></AddNewButtonComponent>
+    </div>
+
+</div>
 <h3>UserList</h3>
 <button class="btn btn-primary" @onclick="LoadList"> click for refresh list</button>
 @if (serviceResponse == null)
@@ -20,10 +26,11 @@ else
                 <th>CreateDate</th>
                 <th>IsActive</th>
                 <th>Email</th>
+                <th>Edit</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var forecast in serviceResponse.Value)
+            @foreach (var forecast in serviceResponse)
             {
                 <tr>
                     <td>@forecast.Id</td>
@@ -31,6 +38,7 @@ else
                     <td>@forecast.CreateDate</td>
                     <td>@forecast.IsActive</td>
                     <td>@forecast.Email</td>
+                    <td><EditButtonComponent OnClick="(()=>UpdateUser(forecast.Id))"></EditButtonComponent></td>
                 </tr>
             }
         </tbody>

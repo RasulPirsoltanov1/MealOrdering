@@ -1,8 +1,7 @@
 ﻿namespace MealOrdering.Server.Data.Models
 {
-    public class OrderItems
+    public class OrderItems:BaseEntity
     {
-        public Guid Id { get; set; }
         public DateTime? CreateDate { get; set; }
         public Guid? CreateUserId { get; set; }
         public string? Description { get; set; }

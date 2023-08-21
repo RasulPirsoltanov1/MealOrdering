@@ -1,0 +1,11 @@
+﻿@inherits BaseButtonComponent
+
+
+<button class="btn btn-secondary"
+        type="submit"
+        disabled="@IsBusy"
+        onclick="@OnClick"
+        title="@(Tooltip ?? "Cancel")">
+    <i class="@(Icon?? "fa-regular fa-floppy-disk fa-bounce")"></i>
+    @(Caption ?? "Cancel")
+</button>

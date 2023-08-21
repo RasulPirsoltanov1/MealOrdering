@@ -1,8 +1,9 @@
-﻿using MealOrdering.Shared.DTOs;
+﻿using MealOrdering.Server.Data.Models;
+using MealOrdering.Shared.DTOs;
 
 namespace MealOrdering.Server.Services.Infrastrucuture
 {
-    public interface IGenericService<T> where T : class
+    public interface IGenericService<T> where T : BaseEntity
     {
         public Task<T> GetById(Guid Id);
         public Task<List<T>> GetAll();
