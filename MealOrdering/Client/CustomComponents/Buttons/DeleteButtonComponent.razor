@@ -1,0 +1,11 @@
+﻿@inherits BaseButtonComponent
+
+
+<button class="btn btn-danger"
+        type="submit"
+        disabled="@IsBusy"
+        onclick="@OnClick"
+        title="@(Tooltip ?? "Delete")">
+    <i class="@(Icon?? "fa-solid fa-trash fa-beat-fade")"></i>
+    @(Caption ?? "Delete")
+</button>

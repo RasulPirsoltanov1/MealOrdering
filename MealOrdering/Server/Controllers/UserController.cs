@@ -78,11 +78,11 @@ namespace MealOrdering.Server.Controllers
             return Response;
         }
         [HttpGet("[action]/{Id}")]
-        public async Task<ServiceResponse<UserDTO>> Delete(string Id)
+        public async Task<ServiceResponse<UserDTO>> Delete(Guid Id)
         {
             ServiceResponse<UserDTO> Response = new ServiceResponse<UserDTO>();
             Response.IsSuccess = true;
-            Response.Value =  _mapper.Map<UserDTO>(await _userService.Delete(Guid.Parse(Id)));
+            Response.Value =  _mapper.Map<UserDTO>(await _userService.Delete(Id));
             Response.Message = "successfull";
             return Response;
         }

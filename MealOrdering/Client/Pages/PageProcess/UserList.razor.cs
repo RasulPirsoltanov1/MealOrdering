@@ -17,7 +17,7 @@ namespace MealOrdering.Client.PageProcess.User
         [Inject]
         private ModalManager _modalManager { get; set; }
         [Inject]
-        private NavigationManager _navigationManager{ get; set; }
+        private NavigationManager _navigationManager { get; set; }
         protected override async Task OnInitializedAsync()
         {
             await LoadList();
@@ -42,6 +42,27 @@ namespace MealOrdering.Client.PageProcess.User
         public void UpdateUser(Guid UserId)
         {
             _navigationManager.NavigateTo($"user/update/{UserId}");
+        }
+
+        public async Task Delete(Guid Id)
+        {
+            try
+            {
+                var res = await _modalManager.ConfirmationAsync("are you sure", "do you want to delete?");
+                if (res)
+                {
+                    await _httpClient.GetServiceResponseAsync<UserDTO>($"api/user/delete/{Id}");
+                    await LoadList();
+                }
+            }
+            catch (ApiException ex)
+            {
+                await _modalManager.ShowMessage("error", ex.Message);
+            }
+            catch (Exception ex)
+            {
+                await _modalManager.ShowMessage("error", ex.Message);
+            }
         }
     }
 }

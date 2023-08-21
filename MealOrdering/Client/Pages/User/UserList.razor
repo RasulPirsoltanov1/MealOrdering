@@ -39,6 +39,7 @@ else
                     <td>@forecast.IsActive</td>
                     <td>@forecast.Email</td>
                     <td><EditButtonComponent OnClick="(()=>UpdateUser(forecast.Id))"></EditButtonComponent></td>
+                    <td><DeleteButtonComponent OnClick="(()=>Delete(forecast.Id))"></DeleteButtonComponent></td>
                 </tr>
             }
         </tbody>
