@@ -35,8 +35,8 @@ builder.Services.AddAuthentication(opt =>
         ValidateAudience = true,
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
-        ValidIssuer = "https://my_company.com",
-        ValidAudience = "https://my_company.com",
+        ValidIssuer = builder.Configuration["JWT:JwtIssuer"],
+        ValidAudience = builder.Configuration["JWT:JwtAuidence"], // Fix the spelling here
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:SecurityKey"]))
     };
 }) ;
@@ -64,6 +64,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication(); 
 app.UseAuthorization();
 
 app.MapRazorPages();
