@@ -23,6 +23,7 @@ builder.Services.AddDbContext<MealOrderingDbContext>(opt =>
 });
 builder.Services.AddAutoMapper(typeof(ConfigureMappingExtension).Assembly);
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<ISupplierService, SupplierService>();
 builder.Services.AddAuthentication(opt =>
 {
     opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;

@@ -842,3 +842,7 @@ C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\obj
 C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\obj\Debug\net6.0\build-gz\E1mNiNgG.gz
 C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\obj\Debug\net6.0\build-gz\TWkG2Czq.gz
 C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\obj\Debug\net6.0\build-gz\3TDJjpiy.gz
+C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\bin\Debug\net6.0\wwwroot\_framework\Blazored.Typeahead.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\bin\Debug\net6.0\wwwroot\_framework\Blazored.Typeahead.dll.gz
+C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\bin\Debug\net6.0\Blazored.Typeahead.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Client\obj\Debug\net6.0\build-gz\+WEHXQMS.gz

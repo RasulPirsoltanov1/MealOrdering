@@ -1,0 +1,72 @@
+﻿@using MealOrdering.Client.Utils;
+@using MealOrdering.Shared.CustomExceptions;
+@using MealOrdering.Shared.DTOs;
+@using MealOrdering.Shared.ResponseModels;
+
+
+
+
+    <BlazoredTypeahead SearchMethod="@SearchSupplier"
+                       TValue="SupplierDTO"
+                       TItem="SupplierDTO"
+                       Value="selectedSupplierDTO",
+                       ValueChanged="SelecedSupplierChanged"
+                       ValueExpression="(()=>selectedSupplierDTO)"
+                       placeholder="searhc by name"
+                       ShowDropDownOnFocus="true"
+                       EnableDropDown="true"
+                       Debounce="500">
+        <SelectedTemplate>
+            @context.Name
+        </SelectedTemplate>
+        <ResultTemplate>
+            @context.Name (@context.IsActive.ToString())
+        </ResultTemplate>
+        <NotFoundTemplate>
+            Sorry, there weren't any search results.
+        </NotFoundTemplate>
+    </BlazoredTypeahead>
+
+
+
+
+
+@code {
+    [Parameter]
+    public Guid Value { get; set; }
+    [Parameter]
+    public EventCallback<Guid> ValueChanged { get; set; }
+    [Inject]
+    private HttpClient _httpClient { get; set; }
+
+    List<SupplierDTO> supplierDTOs = new List<SupplierDTO>();
+    SupplierDTO selectedSupplierDTO = new SupplierDTO();
+
+    string loadingMessage = "Loading... ";
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var res = await _httpClient.GetServiceResponseAsync<ServiceResponse<List<SupplierDTO>>>("api/supplier");
+            supplierDTOs = res.Value;
+        }
+        catch (ApiException)
+        {
+            loadingMessage = "Error...";
+        }
+    }
+    private Task SelecedSupplierChanged(SupplierDTO supplierDTO)
+    {
+        if (supplierDTO == null)
+        {
+            return ValueChanged.InvokeAsync(Guid.Empty);
+        }
+        selectedSupplierDTO = supplierDTO;
+        Value = supplierDTO.Id;
+        return ValueChanged.InvokeAsync(supplierDTO.Id);
+    }
+    private Task<IEnumerable<SupplierDTO>> SearchSupplier(string word)
+    {
+        return Task.FromResult(supplierDTOs.Where(s => s.Name.ToUpper().Contains(word.ToUpper())));
+    }
+}

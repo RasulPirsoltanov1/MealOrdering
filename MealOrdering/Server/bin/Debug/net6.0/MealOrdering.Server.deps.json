@@ -10,6 +10,7 @@
         "dependencies": {
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "Blazored.Typeahead": "4.7.0",
           "MealOrdering.Client": "1.0.0",
           "MealOrdering.Server.Data": "1.0.0",
           "MealOrdering.Shared": "1.0.0",
@@ -65,6 +66,18 @@
         },
         "runtime": {
           "lib/net6.0/Blazored.Modal.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Blazored.Typeahead/4.7.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "6.0.21",
+          "Microsoft.AspNetCore.Components.Web": "6.0.19"
+        },
+        "runtime": {
+          "lib/net6.0/Blazored.Typeahead.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -699,6 +712,7 @@
         "dependencies": {
           "Blazored.LocalStorage": "4.4.0",
           "Blazored.Modal": "7.1.0",
+          "Blazored.Typeahead": "4.7.0",
           "MealOrdering.Shared": "1.0.0",
           "Microsoft.AspNetCore.Components.Authorization": "6.0.21",
           "Microsoft.AspNetCore.Components.WebAssembly": "6.0.19"
@@ -756,6 +770,13 @@
       "sha512": "sha512-ft5bX5barhyzpQc9jjU029ByrAQXgqSMItwhmEbr0pb7r+of8XH0E/OyS8K6O6Disq5R+p4wpt+W+NGg3/OTMA==",
       "path": "blazored.modal/7.1.0",
       "hashPath": "blazored.modal.7.1.0.nupkg.sha512"
+    },
+    "Blazored.Typeahead/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fTN4Bt9rwEE/d33FXFd+h/DBjVtsFJLRf9B8mu0zJWMWG5Mk2tU2il3aK0+laUxNgBNBgEL0jW/831I+oapd6A==",
+      "path": "blazored.typeahead/4.7.0",
+      "hashPath": "blazored.typeahead.4.7.0.nupkg.sha512"
     },
     "Humanizer.Core/2.8.26": {
       "type": "package",

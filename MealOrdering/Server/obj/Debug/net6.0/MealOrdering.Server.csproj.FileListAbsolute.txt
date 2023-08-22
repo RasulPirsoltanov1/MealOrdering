@@ -95,3 +95,4 @@ C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Server\bin
 C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Server\bin\Debug\net6.0\Blazored.LocalStorage.dll
 C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Server\bin\Debug\net6.0\BouncyCastle.Crypto.dll
 C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Server\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\MealOrdering\MealOrdering\Server\bin\Debug\net6.0\Blazored.Typeahead.dll

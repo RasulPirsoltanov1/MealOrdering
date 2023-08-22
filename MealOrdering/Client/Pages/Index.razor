@@ -9,11 +9,20 @@ Welcome to your new app.
 
 <SurveyPrompt Title="How is Blazor working for you?" />
 
+<p>
+    @SupplierId
+</p>
+
+
+
+<MealOrdering.Client.CustomComponents.SupplierDropDownComponent @bind-Value=SupplierId @bind-Value:event="SelecedSupplierChanged"></MealOrdering.Client.CustomComponents.SupplierDropDownComponent>
 
 @code {
     private int value = 0;
+    private Guid SupplierId = Guid.Parse("a7e0b129-b513-41aa-95e3-262dbf852132");
     protected override async Task OnInitializedAsync()
     {
         value = await localStorage.GetItemAsync<int>("counter");
+
     }
 }

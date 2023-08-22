@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MealOrdering.Server.Services.Services
 {
-    public class GenericService<T>:IGenericService<T> where T : BaseEntity
+    public class GenericService<T> : IGenericService<T> where T : BaseEntity
     {
 
         private readonly IMapper _mapper;
@@ -17,11 +17,11 @@ namespace MealOrdering.Server.Services.Services
             _mapper = mapper;
             _context = context;
         }
-        public async Task<T> Create(T userDTO)
+        public async Task<T> Create(T entity)
         {
-            await _context.Set<T>().AddAsync(userDTO);
+            await _context.Set<T>().AddAsync(entity);
             await _context.SaveChangesAsync();
-            return userDTO;
+            return entity;
         }
 
         public async Task<T> Delete(Guid Id)
@@ -41,12 +41,12 @@ namespace MealOrdering.Server.Services.Services
 
         public async Task<List<T>> GetAll()
         {
-            return _mapper.Map<List<T>>(await _context.Users.Where(u => u.IsActive == true).ToListAsync());
+            return await _context.Set<T>().ToListAsync();
         }
 
         public async Task<T> GetById(Guid Id)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(x => x.Id == Id);
+            var user = await _context.Set<T>().FirstOrDefaultAsync(x => x.Id == Id);
             if (user != null)
             {
                 return _mapper.Map<T>(user);
@@ -57,19 +57,13 @@ namespace MealOrdering.Server.Services.Services
             }
         }
 
-        public async Task<T> Update(T userDTO)
+        public async Task<T> Update(T entity)
         {
-            var entity = _context.Users.Find(userDTO.Id);
-            if (entity != null)
-            {
-                _mapper.Map(userDTO, entity);
-                await _context.SaveChangesAsync();
-                return _mapper.Map<T>(entity);
-            }
-            else
-            {
-                throw new Exception("User cant define!");
-            }
+            var entry = _context.Set<T>().Update(entity);
+            await _context.SaveChangesAsync();
+
+            // Access the updated entity using the Entity property of EntityEntry
+            return _mapper.Map<T>(entry.Entity);
         }
     }
 }

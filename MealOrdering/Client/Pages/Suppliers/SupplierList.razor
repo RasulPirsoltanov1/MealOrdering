@@ -1,0 +1,70 @@
+﻿@page "/supplierList"
+@using MealOrdering.Shared.DTOs;
+@using MealOrdering.Shared.ResponseModels;
+
+<h3>SupplierList</h3>
+
+<AddNewButtonComponent OnClick="AddNew"></AddNewButtonComponent>
+
+@if (SupplierDTOs == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name and Surname</th>
+                <th>CreateDate</th>
+                <th>IsActive</th>
+                <th>Email</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var supplier in SupplierDTOs)
+            {
+                <tr>
+                    <td>@supplier.Id</td>
+                    <td>@supplier.Name</td>
+                    <td>@supplier.CreateDate</td>
+                    <td>@supplier.IsActive</td>
+                    <td>@supplier.WebUrl</td>
+                    <td><EditButtonComponent OnClick="(()=>UpdateSupplier(supplier.Id))"></EditButtonComponent></td>
+                    <td><DeleteButtonComponent ></DeleteButtonComponent></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+
+
+
+
+
+@code {
+    [Inject]
+    HttpClient _httpClient { get; set; }
+    [Inject]
+    NavigationManager _navigationManager{ get; set; }
+    List<SupplierDTO> SupplierDTOs=new List<SupplierDTO>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var res =await _httpClient.GetFromJsonAsync<ServiceResponse<List<SupplierDTO>>>("api/supplier");
+        SupplierDTOs = res.Value;
+    }
+    public void AddNew()
+    {
+        _navigationManager.NavigateTo("supplier/add");
+    }
+
+    public async Task UpdateSupplier(Guid Id)
+    {
+        _navigationManager.NavigateTo($"supplier/edit/{Id}");
+    }
+}

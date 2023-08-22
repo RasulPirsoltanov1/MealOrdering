@@ -61,7 +61,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-68jO3fVtCYgC9Fk6mQ785dUpttXHxRzGJtvSdYyAap8=",
+      "hash": "sha256-XeEn8F+cNBgrnRXyAP4oPVCZNNSCh7NyO6FFJzoILv0=",
       "url": "index.html"
     },
     {
@@ -79,6 +79,10 @@
     {
       "hash": "sha256-Sr30UiM7JErBe8hojY6HAgaOOgfQE5zHijI0uVypmkM=",
       "url": "_framework\/Blazored.Modal.dll"
+    },
+    {
+      "hash": "sha256-0cq+AP7JH6JLYVm2dkmhZ4IIP65fMqy\/jFQ5mtrpkJY=",
+      "url": "_framework\/Blazored.Typeahead.dll"
     },
     {
       "hash": "sha256-rgTiigjbEsvEBcZsymPcgGCo6oUscPZ5qpj2DDeiatU=",
@@ -869,19 +873,19 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-BF6nRnBP5EFM\/SUV2IHDPbJDgE2s1YJ+isix4bzU4XY=",
+      "hash": "sha256-mjZRdFTzloDLJaNShYubYRzv\/\/wATikOopuboZQRqcs=",
       "url": "_framework\/MealOrdering.Shared.dll"
     },
     {
-      "hash": "sha256-tmatO3L2Yl8sliidDL8SKbuoSrPU5b9kTY8U9TJHMUM=",
+      "hash": "sha256-oJZUYrZdNwGFAhdq4GKEERQS\/8px6QB8hio48xf+o08=",
       "url": "_framework\/MealOrdering.Shared.pdb"
     },
     {
-      "hash": "sha256-uOEa+lMfqll7VC94MbZxU\/pGPWFsCg9Vwl6y5dTLwWo=",
+      "hash": "sha256-a3qy+ER0esXBwABwaDciqU169zeP6xjBdBcWPLONJVk=",
       "url": "_framework\/MealOrdering.Client.dll"
     },
     {
-      "hash": "sha256-Ap6DvzwXOl\/5ct89iUTRTWuwSSjLcLnS9HNRnN2DZXk=",
+      "hash": "sha256-v7Q+iFt0YnKFtDOoho6cLz6EcL92wfiAtXy5H2n8CXg=",
       "url": "_framework\/MealOrdering.Client.pdb"
     },
     {
@@ -889,8 +893,16 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-L31p+04\/uEcZkcnRZIjIfznS+9TaJgr0kQPmPxapFts=",
+      "hash": "sha256-f03kjB\/XwmVxveZei\/c6f14bMRjuWg8LMsMZNTOP9eU=",
       "url": "_framework\/blazor.boot.json"
+    },
+    {
+      "hash": "sha256-J3yBtIuvF38lccTVcUS7ScUgk93ATgKN6kbpbFM9JA0=",
+      "url": "_content\/Blazored.Typeahead\/blazored-typeahead.css"
+    },
+    {
+      "hash": "sha256-ClIzMmBI5Nozgt7KRG3K3u45r2pMtn\/X9Vx2UeudOPU=",
+      "url": "_content\/Blazored.Typeahead\/blazored-typeahead.js"
     },
     {
       "hash": "sha256-JnMrV9FYOYSibA85LvQGGV3uJ7zv2njdJX1GFslt2Aw=",
@@ -901,5 +913,5 @@
       "url": "_content\/Blazored.Modal\/Blazored.Modal.bundle.scp.css"
     }
   ],
-  "version": "yy1Gl0LQ"
+  "version": "1+uuEuJX"
 };

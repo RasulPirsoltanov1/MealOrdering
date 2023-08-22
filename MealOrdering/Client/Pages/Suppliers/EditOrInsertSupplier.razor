@@ -1,0 +1,75 @@
+﻿@page "/supplier/add"
+@page "/supplier/edit/{Id:guid}"
+@using MealOrdering.Client.Utils;
+@using MealOrdering.Shared.DTOs;
+@using MealOrdering.Shared.ResponseModels;
+
+<h3>EditOrInsertSupplier</h3>
+<EditForm Model="supplierDTO" OnValidSubmit="EditOrInsert">
+    <div class="row">
+        <div class="col-md-6">
+            <label for="name" class="form-label"> Name:</label>
+            <InputText id="name" class="form-control" @bind-Value="supplierDTO.Name"></InputText>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label for="WebUrl" class="form-label"> WebUrl:</label>
+            <InputText id="WebUrl" class="form-control" @bind-Value="supplierDTO.WebUrl"></InputText>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label for="isActive" class="form-label"> IsActive:</label>
+            <InputCheckbox class="form-check-input" @bind-Value="supplierDTO.IsActive"></InputCheckbox>
+        </div>
+    </div>
+    <SaveButtonComponent ></SaveButtonComponent>
+    <CancelButtonComponent OnClick="Cancel"></CancelButtonComponent>
+</EditForm>
+
+
+@code {
+    [Parameter]
+    public Guid Id { get; set; }
+
+    public SupplierDTO? supplierDTO { get; set; } = new SupplierDTO();
+    [Inject]
+    private HttpClient _httpClient { get; set; }
+    [Inject]
+    private ModalManager _modalManager{ get; set; }
+    [Inject]
+    private NavigationManager _navigationManager{ get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            if (Id != null)
+            {
+                ServiceResponse<SupplierDTO>? serviceResponse = await _httpClient.GetFromJsonAsync<ServiceResponse<SupplierDTO>>($"api/supplier/GetById/{Id}");
+                supplierDTO = serviceResponse.Value;
+            }
+        }
+        catch (Exception ex)
+        {
+            await _modalManager.ShowMessage("error", ex.Message);
+        }
+    }
+    public async Task EditOrInsert()
+    {
+        if (Id == null && Id == Guid.Empty)
+        {
+            var res=await _httpClient.PostAsJsonAsync<SupplierDTO>("api/supplier/create",supplierDTO);
+            _navigationManager.NavigateTo("supplierlist");
+        }
+        else
+        {
+            var res = await _httpClient.PostAsJsonAsync<SupplierDTO>($"api/supplier/update/{Id}", supplierDTO);
+            _navigationManager.NavigateTo("supplierlist");
+        }
+    }
+    public void Cancel()
+    {
+        _navigationManager.NavigateTo("supplierList");
+    }
+}
