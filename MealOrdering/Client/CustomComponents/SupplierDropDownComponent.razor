@@ -6,28 +6,23 @@
 
 
 
-    <BlazoredTypeahead SearchMethod="@SearchSupplier"
-                       TValue="SupplierDTO"
-                       TItem="SupplierDTO"
-                       Value="selectedSupplierDTO",
-                       ValueChanged="SelecedSupplierChanged"
-                       ValueExpression="(()=>selectedSupplierDTO)"
-                       placeholder="searhc by name"
-                       ShowDropDownOnFocus="true"
-                       EnableDropDown="true"
-                       Debounce="500">
-        <SelectedTemplate>
-            @context.Name
-        </SelectedTemplate>
-        <ResultTemplate>
-            @context.Name (@context.IsActive.ToString())
-        </ResultTemplate>
-        <NotFoundTemplate>
-            Sorry, there weren't any search results.
-        </NotFoundTemplate>
-    </BlazoredTypeahead>
-
-
+<BlazoredTypeahead SearchMethod="@SearchSupplier" @bind-Value="selectedSupplierDTO"
+                   TValue="SupplierDTO"
+                   TItem="SupplierDTO"
+                   placeholder="searhc by name"
+                   ShowDropDownOnFocus="true"
+                   EnableDropDown="true"
+                   Debounce="500">
+    <SelectedTemplate>
+        @context.Name
+    </SelectedTemplate>
+    <ResultTemplate>
+        @context.Name (@context.IsActive.ToString())
+    </ResultTemplate>
+    <NotFoundTemplate>
+        Sorry, there weren't any search results.
+    </NotFoundTemplate>
+</BlazoredTypeahead>
 
 
 
@@ -47,8 +42,8 @@
     {
         try
         {
-            var res = await _httpClient.GetServiceResponseAsync<ServiceResponse<List<SupplierDTO>>>("api/supplier");
-            supplierDTOs = res.Value;
+            var res = await _httpClient.GetServiceResponseAsync<List<SupplierDTO>>("api/supplier");
+            supplierDTOs = res;
         }
         catch (ApiException)
         {
@@ -57,16 +52,24 @@
     }
     private Task SelecedSupplierChanged(SupplierDTO supplierDTO)
     {
-        if (supplierDTO == null)
+        try
         {
-            return ValueChanged.InvokeAsync(Guid.Empty);
+            if (supplierDTO == null)
+            {
+                return ValueChanged.InvokeAsync(Guid.Empty);
+            }
+            selectedSupplierDTO = supplierDTO;
+            Value = supplierDTO.Id;
+            return ValueChanged.InvokeAsync(supplierDTO.Id);
         }
-        selectedSupplierDTO = supplierDTO;
-        Value = supplierDTO.Id;
-        return ValueChanged.InvokeAsync(supplierDTO.Id);
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            throw;
+        }
     }
-    private Task<IEnumerable<SupplierDTO>> SearchSupplier(string word)
+    private async Task<IEnumerable<SupplierDTO>> SearchSupplier(string word)
     {
-        return Task.FromResult(supplierDTOs.Where(s => s.Name.ToUpper().Contains(word.ToUpper())));
+        return await Task.FromResult(supplierDTOs.Where(s => s.Name.ToUpper().Contains(word.ToUpper())));
     }
 }

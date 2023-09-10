@@ -15,7 +15,7 @@ Welcome to your new app.
 
 
 
-<MealOrdering.Client.CustomComponents.SupplierDropDownComponent @bind-Value=SupplierId @bind-Value:event="SelecedSupplierChanged"></MealOrdering.Client.CustomComponents.SupplierDropDownComponent>
+<MealOrdering.Client.CustomComponents.SupplierDropDownComponent @bind-Value="SupplierId"></MealOrdering.Client.CustomComponents.SupplierDropDownComponent>
 
 @code {
     private int value = 0;
@@ -26,3 +26,52 @@ Welcome to your new app.
 
     }
 }
+
+
+
+@*<BlazoredTypeahead SearchMethod="SearchFilms"
+@bind-Value="SelectedFilm">
+    <SelectedTemplate>
+        @context.Title
+    </SelectedTemplate>
+    <ResultTemplate>
+        @context.Title (@context.Year)
+    </ResultTemplate>
+</BlazoredTypeahead>
+
+@if (SelectedFilm != null)
+{
+    <p>Selected Film is: @SelectedFilm.Title</p>
+}
+
+@code {
+
+    private List<Film> Films;
+    private Film SelectedFilm;
+
+    protected override void OnInitialized()
+    {
+        Films = new List<Film> {
+            new Film("The Matrix", 1999),
+            new Film("Hackers", 1995),
+            new Film("War Games", 1983) };
+    }
+
+    private async Task<IEnumerable<Film>> SearchFilms(string searchText)
+    {
+        return await Task.FromResult(Films.Where(x => x.Title.ToLower().Contains(searchText.ToLower())).ToList());
+    }
+
+    class Film
+    {
+        public string Title { get; set; }
+        public int Year { get; set; }
+
+        public Film(string title, int year)
+        {
+            Title = title;
+            Year = year;
+        }
+    }
+
+}*@

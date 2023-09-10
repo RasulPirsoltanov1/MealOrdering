@@ -1,0 +1,19 @@
+﻿@page "/orders"
+@using MealOrdering.Shared.DTOs;
+@using MealOrdering.Shared.ResponseModels;
+
+<h3>OrderList</h3>
+
+@code {
+    [Inject]
+    HttpClient _httpClient { get; set; }
+    [Inject]
+    NavigationManager _navigationManager { get; set; }
+    List<OrderDTO> OrderDTOs = new List<OrderDTO>();
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        var orders = await _httpClient.GetFromJsonAsync<ServiceResponse<List<OrderDTO>>>("api/Order");
+    }
+}

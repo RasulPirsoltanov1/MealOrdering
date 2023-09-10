@@ -92,6 +92,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/resul/OneDrive/Masaüstü/Projects/MealOrdering/MealOrdering/Client/Pages/Orders/AddOrUpdateOrder.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJzXEFkZE9yVXBkYXRlT3JkZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/resul/OneDrive/Masaüstü/Projects/MealOrdering/MealOrdering/Client/Pages/Orders/OrderList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJzXE9yZGVyTGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/resul/OneDrive/Masaüstü/Projects/MealOrdering/MealOrdering/Client/Pages/Suppliers/EditOrInsertSupplier.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3VwcGxpZXJzXEVkaXRPckluc2VydFN1cHBsaWVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
